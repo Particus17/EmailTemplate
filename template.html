@@ -1,47 +1,334 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml/" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta description="A Web Development agency dedicated to assisting every clients needs">
     <title>DevPunk Inc</title>
-    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        body{
+            margin: 0;
+            background-color: #000;
+        }
+        table{
+            border-spacing: 0;
+        }
+        td{
+            padding:0;
+        }
+        img{
+            border: 0;
+        }
+        /*reinforce the background color and set table styling */
+        .wrapper{
+            width: 100%;
+            table-layout:fixed; /*makes sure table isn't any wider than the center tag that it's inside of*/
+            background-color: #fff;
+            padding-bottom: 60px;
+        }
+        .main{
+            background-color: #000;
+            margin: 0 auto; /* reinforces center styling*/
+            width: 100%;
+            max-width: 600px; /* this is the ideal size for email templates */
+            border-spacing: 0 ; /*manages spacing on sides of main table*/
+            font-family: sans-serif;
+            color: #fff;
+        }
+        .two-col{
+            text-align:center;
+            font-size: 0;
+        }
+        .two-col .col{ /* this sets our columns side by side instead of stacked one top the other*/
+            width: 100%;
+            max-width: 300px; /* this ensures they fit inside our 600px template width*/
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+        }
+        .service-col{
+            text-align: center;
+            font-size: 0;
+            padding: 15px 0 25px;
+        }
+        .service-col .col{ /* this sets our columns side by side instead of stacked one top the other*/
+            width: 100%;
+            max-width: 175px; /* this ensures they fit inside our 600px template width*/
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+        }
+        .service-col .padding{
+            padding: 20px;
+        }
+        .service-col .content{
+            font-size: 15px;
+            line-height: 20px;
+            
+        }
+        .content-col.last{
+            padding: 15px  ;
+            
+        }
+        .content-col .padding{
+            padding: 15px;
+        }
+        .content-col .content{
+            font-size: 15px;
+            line-height: 20px;
+            text-align: left;
+        }
+        .profile{
+            margin: 0 65px;
+            padding: 0 100px;
+        }
+        .btn{
+            background-color: #000;
+            color: #25f292;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        
+    </style>
 </head>
-<body>
-    <td align="center">
-        <table>
-    <header> <a href="https://devpunkinc.renderforestsites.com/"> <img src="imgs/Devpunk _2_.png" class="logo" alt="logo"></a></header>
-    <img src="imgs/emailheader.png" class="header">
-    <h1> Need an agency you can count on? </h1>
-    <section class="content">
-    <p> Hello [Client/Business Name], 
+<body> 
+    <center class="wrapper"> <!--this tag is usually depricated in html5 but for email purposes it is ok to use-->
+        <table class="main" width="100%"> <!-- this will contain our email content-->
+            <!-- table row-->
+            <tr> 
+                <td height="8" style="background-color: #fff"></td>
+            </tr>
 
-        <br>
-        <br>
 
-        We are DevPunk Inc, a creative agency that specializes in website development and design. 
-        We came across your website and noticed that you could benefit from our expertise in [specific service]. We have worked with several clients, and helped them to improve their online presence. 
-        
-         <br>
-        <br>
-        We would like to schedule a call with you to discuss how we can help your website achieve its full potential. Let us know a time that works for you and we'll make sure to schedule the call.
-        
-         <br>
-        <br>
-        Click the logo above to see our projects! To schedule a consultation click the link below or reply to this email. Thank you for your time and we look forward to hearing from you soon! 
-        
-         <br>
-        <br>
-        <br>
-        Best regards,<br> 
-        DevPunk Inc. Team </p>
-    </section>
-    <footer class="col-sm-2"> 
-       <h4> Click <em>consultation</em> to schedule a meeting >>> </h4> 
-       <button class="btn"><a href="https://calendly.com/devpunkinc/30min?month=2023-01" alt="calendly link" class="link"> consultation </a> </button>
-    </footer>
-    </table>
-    </td>
+            <!-- Logo/header -->
+
+            <!-- tr > td > table tags here control what happens to our table up to 600px  -->
+
+            <tr>
+                <td style="padding: 14px 0 4px;">  <!-- this adds a bit of padding to the header section-->
+                    <table width="100%">
+                         <!-- tr td tags here add spacing in the header between socials and logo -->
+                        <tr>
+                            <td class="two-col">
+
+                                <table class="col">
+                                <!-- these allow us to add padding around our logo img -->
+                                    <tr>
+                                        <td style="padding: 0 30px 10px;"> <!-- this centers inside of the 300px col -->
+                                            <a href="https://devpunkinc.renderforestsites.com/">
+                                                <img src="https://i.ibb.co/Pz860G3/Devpunk-2.png" class="logo" alt="Alternative logo" width="250px" style="max-width: 300px;">
+                                            </a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- <table class="col">
+                                    <tr>
+                                        <td style="padding: 50px 95px;">
+                                            <a href="#" ><img src="https://i.ibb.co/wJBvYky/white-facebook.png" alt="Facebook link" width="30"></a>
+                                            <a href="#" ><img src="https://i.ibb.co/k2DBWQt/white-instagram.png" alt="Instagram link" width="30"></a>
+                                            <a href="#" ><img src="https://i.ibb.co/qrTBmR7/white-twitter.png" alt="white-twitter" alt="Twitter link" width="30"></a>
+                                
+                                        </td>
+                                    </tr>
+
+                                </table> -->
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </td>
+            </tr> 
+
+            <!-- Email Banner -->
+
+            <tr>
+                <td  style="text-align: center;padding: 15px;">
+                   <!-- <h1  style="font-size: 20px;font-weight: bold;" > Need an agency you can count on? </h1> -->
+                    <img src="https://i.ibb.co/WvXc35g/emailheader.png" class="header" width="600px" style="max-width:100%;">
+                   
+                </td>
+            </tr>
+            
+            <!-- Two col (content) -->
+
+            <tr>
+                <td style="background-color: #000; color: #fff;">
+                    <table width="100%">
+                        <tr>
+                            <td class="content-col last">
+                              <!--  <table class="col">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content profile">
+                                                <tr>
+                                                    <td >
+                                                        <a href="https://devpunkinc.renderforestsites.com/">
+                                                            <img src="https://i.ibb.co/xLSLBgK/profile.png" alt="DevPunk logo" width="200" height="150px" title="DevPunk logo"> 
+                                                        </a> 
+                                                      
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table> -->
+
+                                <table class="col">
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content">
+                                                <tr>
+                                                    <td  style="text-align:center; padding: 15px;">
+                                                        <p style="font-weight:bold; font-size: 16px;"> We are DevPunk Inc. </p>
+                                                        <p style=" font-size: 14px;">
+                                                            A Creative Agency that specializes in Website Development and Design.
+                                                            We would like to schedule a call with you to discuss how we can help your website achieve its full potential.
+                                                            Click on the logo above to see our portfolio! To schedule a consultation select <em>Book Now</em> below or reply to this email for available dates.
+                                                            Thank you for your consideration and we look forward to hearing from you soon! 
+                                                            <br>
+                                                            <br>
+                                                                Best regards,
+                                                            <br> 
+                                                                DevPunk Inc. Team
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- Three Col-->
+            <!-- start by setting up your tr,td,table tags much like the logo section above -->
+            <tr>
+                <td style="background-color: #000;color: #fff;">
+                    <table width="100%"> <!-- width 100% to take up full template-->
+                        <tr> <!-- this will be the start to our 3 col table-->
+                            <td class="service-col">
+                                <table class="col"> <!-- this is the start of col #1-->
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content"> <!-- this lets us indentify style, txt and img that is inside this table--> 
+                                                <tr>
+                                                    <td>
+                                                      
+                                                        <img src="https://i.ibb.co/gdp4ByV/email.png" alt="" width="100" style="max-width: 130px ;">
+                                                      
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p style="font-weight: bold; font-size: 17px;"> E-mail Templates </p>
+                                                        <p>
+                                                            Responsive Html E-mail Templates for Business Ads and Promos
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                 <table class="col"> <!-- this is the start of col #2-->
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content"> <!-- this lets us indentify style, txt and img that is inside this table--> 
+                                                <tr>
+                                                    <td>
+                                                      
+                                                        <img src="https://i.ibb.co/GW1v46r/settings.png" alt="" width="100" style="max-width: 130px ;">
+                                                      
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p style="font-weight: bold; font-size: 17px;"> Web Design</p>
+                                                        <p>
+                                                            Landing Pages, Static Sites or Full Stack projects 
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="col"> <!-- this is the start of col #3-->
+                                    <tr>
+                                        <td class="padding">
+                                            <table class="content"> <!-- this lets us indentify style, txt and img that is inside this table--> 
+                                                <tr>
+                                                    <td>
+                                                      
+                                                        <img src="https://i.ibb.co/HHhS5J2/home.png" alt="" width="100" style="max-width: 130px ;">
+                                                      
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p style="font-weight: bold; font-size: 17px;"> Rebrand </p>
+                                                        <p>
+                                                            Remodel your current site or Create a new one
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+           
+            <!-- title, text, and btn-->
+                <tr>
+                    <td>
+                        <table width="100%">
+                            <tr>
+                                <td style="text-align: center;padding: 15px;">
+                                    <p style="font-size: 20px;font-weight: bold;"> Schedule a Consultation</p>
+                                    <a href="https://calendly.com/devpunkinc/30min?month=2023-01" class="btn"> Book Now </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            <!-- footer section -->
+                
+            <!--    <tr  style="background-color: #000;">
+                    <td class="padding">
+                        <table class="content profile">
+                            <tr>
+                                <td >
+                                    <a href="https://devpunkinc.renderforestsites.com/">
+                                        <img src="https://i.ibb.co/xLSLBgK/profile.png" alt="DevPunk logo" width="200" height="150px" title="DevPunk logo"> 
+                                    </a> 
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr> 
+            -->                  
+        </table>
+    </center>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
